@@ -185,7 +185,7 @@ const Post = ({ post }) => {
  
 
             <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16' />
-
+            <p style={{color:'red'}}>Note: images should be no more 1MB and size of 1200 * 720 px</p>
 
             <button type="submit" className="px-5 py-2 mt-3" style={{ background: "#c01907" }} disabled={active}>
               Submit

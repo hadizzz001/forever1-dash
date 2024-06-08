@@ -56,6 +56,14 @@
         "async": false
       }
     },
+    "(app-client)/./app/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
     "(app-client)/./app/components/AddPost.jsx": {
       "*": {
         "id": "(sc_client)/./app/components/AddPost.jsx",
@@ -259,6 +267,14 @@
       ],
       "async": false
     },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\Donishka\\web - dash\\app\\page.tsx": {
+      "id": "(app-client)/./app/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
+    },
     "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\Donishka\\web - dash\\app\\components\\AddPost.jsx": {
       "id": "(app-client)/./app/components/AddPost.jsx",
       "name": "*",
@@ -309,7 +325,7 @@
     }
   },
   "entryCSSFiles": {
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\Donishka\\web - dash\\app\\dashboard\\page": {
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\Donishka\\web - dash\\app\\page": {
       "modules": [],
       "files": []
     },
@@ -321,6 +337,10 @@
       "files": [
         "static/css/app/layout.css"
       ]
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\Donishka\\web - dash\\app\\dashboard\\page": {
+      "modules": [],
+      "files": []
     },
     "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\Donishka\\web - dash\\app\\dashboard\\layout": {
       "modules": [],
