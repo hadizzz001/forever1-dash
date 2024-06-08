@@ -15,9 +15,7 @@ const AddPost = () => {
   const [modalOpen, setModalOpen] = useState(false); 
   const [inputs, setInputs] = useState({}); 
   const [active, setActive] = useState(false)
-  const [firstSelectValue, setFirstSelectValue] = useState('');
-  const [secondSelectValue, setSecondSelectValue] = useState('0');
-  const [secondSelectOptions, setSecondSelectOptions] = useState([]);
+  const [firstSelectValue, setFirstSelectValue] = useState(''); 
   const [value1, setValue1] = useState('');  
   const [imgs, setImgs] = useState([''])
  
@@ -33,8 +31,8 @@ const AddPost = () => {
 
 
   useEffect(() => {
-    setInputs((prevState) => ({ ...prevState, category: "" + firstSelectValue, type: "" + secondSelectValue , img: imgs }));
-  }, [firstSelectValue, secondSelectValue, imgs ])
+    setInputs((prevState) => ({ ...prevState, category: "" + firstSelectValue, img: imgs }));
+  }, [firstSelectValue, imgs ])
 
 
    
@@ -47,10 +45,7 @@ const AddPost = () => {
 
     if (e.target.category.value == "0") {
       alert("Please select a category");
-    }
-    else if (secondSelectValue == "0") {
-      alert("Please select a type");
-    }
+    } 
     else if (imgs.includes("")) {
       alert("Please select item image");
     }
@@ -96,25 +91,10 @@ const AddPost = () => {
 
   const handleFirstSelectChange = (event) => {
     const selectedValue = event.target.value;
-    setFirstSelectValue(selectedValue);
-    const optionsForSecondSelect = getOptionsForSecondSelect(selectedValue);
-    setSecondSelectOptions(optionsForSecondSelect);
+    setFirstSelectValue(selectedValue); 
   };
 
-  const getOptionsForSecondSelect = (firstSelectValue) => {
-    switch (firstSelectValue) {
-      case 'Appliances':
-        return ['--Choose Type--', 'Home Appliances', 'Outdoor Appliances', 'Office Appliances', 'Miscellaneous Appliances'];
-      case 'Fashion':
-        return ['--Choose Type--', 'Men Wear', 'Women Wear', 'Baby Wear'];
-      case 'Household':
-        return ['--Choose Type--', 'Furniture', 'Home Supplies'];
-      case 'Picnic Items':
-        return ['--Choose Type--', 'Picnic Supplies'];
-      default:
-        return [];
-    }
-  };
+ 
 
 
 
@@ -138,7 +118,7 @@ const AddPost = () => {
       <button
         onClick={() => setModalOpen(true)}
         className="text-white p-3 cursor-pointer"
-        style={{ background: "#ab695d" }}
+        style={{ background: "#c01907" }}
       >
         Add New Item
       </button>
@@ -146,7 +126,7 @@ const AddPost = () => {
       <button
         onClick={() => push("/reservation")}
         className="text-white p-3 cursor-pointer"
-        style={{ marginLeft: "1em", background: "#ab695d" }}
+        style={{ marginLeft: "1em", background: "#c01907" }}
       >
         View Orders
       </button>
@@ -188,26 +168,14 @@ const AddPost = () => {
 
             <select name="category" value={firstSelectValue} onChange={handleFirstSelectChange} style={{ width: "100%", height: "40px" }}  >
               <option value="0" selected>--Choose Category--</option>
-              <option value="Appliances">Appliances</option>
-              <option value="Fashion">Fashion</option>
-              <option value="Household">Household</option>
-              <option value="Picnic Items">Picnic Items</option>
+              <option value="Food">Food</option>
+              <option value="Drink">Drink</option>
+              <option value="Donishka Mart">Donishka Mart</option> 
             </select>
 
             <br />
 
-
-            <select value={secondSelectValue} onChange={(event) => setSecondSelectValue(event.target.value)} style={{ width: "100%", height: "40px" }} className="mt-3">
-
-              {secondSelectOptions.map((option) => (
-                <option
-                  key={option}
-                  value={option}
-                >
-                  {option}
-                </option>
-              ))}
-            </select>
+ 
 
 
             <Dropzone HandleImagesChange={handleImgChange} className='mt-10 border border-neutral-200 p-16'  />
@@ -216,20 +184,20 @@ const AddPost = () => {
             <style
   dangerouslySetInnerHTML={{
     __html:
-      "\n.uploadcare--widget__button_type_open { \n    background-color: #ab695d !important;\n}\n"
+      "\n.uploadcare--widget__button_type_open { \n    background-color: #c01907 !important;\n}\n"
   }}
 /> 
 
 <style
   dangerouslySetInnerHTML={{
     __html:
-      "   \n\n.uploadcare--button_size_big { \n    background-color: #ab695d !important;\n}\n"
+      "   \n\n.uploadcare--button_size_big { \n    background-color: #c01907 !important;\n}\n"
   }}
 />
 
 
 
-            <button type="submit" className="px-5 py-2 mt-3" style={{ background: "#ab695d" }} disabled={active}>
+            <button type="submit" className="px-5 py-2 mt-3" style={{ background: "#c01907" }} disabled={active}>
               Submit
             </button>
           </form> 
