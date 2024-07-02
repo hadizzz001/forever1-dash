@@ -174,9 +174,9 @@ const Post = ({ post }) => {
 
 <select name="category" value={firstSelectValue} onChange={handleFirstSelectChange} style={{ width: "100%", height: "40px" }}  >
 <option value="0" selected>--Choose Category--</option>
-              <option value="Food">Food</option>
-              <option value="Drink">Drink</option>
-              <option value="Donishka Mart">Donishka Mart</option> 
+<option value="Crème Homme">Crème Homme</option>
+              <option value="Crème Femme">Crème Femme</option>
+              <option value="Crème Bébé">Crème Bébé</option> 
             </select>
 
             <br />
